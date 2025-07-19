@@ -11,23 +11,48 @@ A smart system designed to help drivers find available parking spots in real tim
 ---
 
 ## 📸 Screenshots
-<h3>Home Page</h3>
+<h3>User View – Home Page</h3>
 <div>
 <img src="images/homepag1.png" width="300" alt="Homepage" />
 <img src="images/homepage2.png" width="300" alt="Homepage" />
 </div>
-<h3>Parking Page</h3>
+<h3>🚘 User View – Parking Availability</h3>
 <div>
 <img src="images/parkingpage1.png" width="300" alt="Parking Map" />
 	<img src="images/parkingpage2.png" width="300" alt="Parking Map" />
+	<p align="left">
+  This is the user-facing interface of the Smart Parking System.<br>
+  It displays live information about available<br>
+  and occupied parking spots, helping drivers<br>
+  easily find a vacant spot.<br><br>
+
+  <b>Key features shown:</b><br>
+  ✅ Number of available spots<br>
+  ❌ Number of occupied spots<br>
+  🅿️ Total parking spots<br>
+  📍 Real-time display of each spot’s status<br>
+  (e.g. “Spot 1 – Available”)
+</p>
+
+
 </div>
 
-<h3>📊 Admin Dashboard (Supervisor View)</h3>
+<h3>Supervisor View - 📊Admin Dashboard</h3>
 <div>
-<img src="images/Dashboard .png" width="300" alt="Parking Map" />
-	
+<img src="images/Dashboard .png" width="600" alt="Parking Map" />
 </div>
+ This dashboard provides an overview of<br>
+  the parking system usage. It displays real-time<br>
+  statistics such as:<br><br>
 
+  • Total parking spots<br>
+  • Total number of cars<br>
+  • Total usage time<br><br>
+
+  <b>A detailed breakdown per parking spot:</b><br>
+  • How many cars used it<br>
+  • Total duration of usage (in hours)
+</p>
 
 ---
 
@@ -36,7 +61,7 @@ A smart system designed to help drivers find available parking spots in real tim
 - *Frontend*: React.js + Next.js  
 - *IoT Hardware*: Arduino + ESP32-sensor 
 - *Backend/API: Firebase   
-- *Communication*: HTTP Requests or WebSocket  
+- *Communication*: HTTP Requests   
 
 
 ---
@@ -60,4 +85,8 @@ This system performs the following:
 👨‍💻 Developer
 	•	Khalid Faisal Alfehaid — Full project development and implementation
 
- note 🗒: This is a graduation project for the 2024-2025 academic year in the Computer Information Systems major.
+ Note: This is a graduation project for the 2024-2025 academic year in the Computer Information Systems major, and was done by me and my cullegse 
+
+ > 📌 *Note:*  
+> This project was completed during the academic year *2024-2025*,  
+> developed by a team of two undergraduate students as a graduation project.
