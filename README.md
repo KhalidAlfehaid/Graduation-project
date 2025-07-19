@@ -11,11 +11,22 @@ A smart system designed to help drivers find available parking spots in real tim
 ---
 
 ## 📸 Screenshots
+<h3>Home Page</h3>
+<div>
+<img src="images/homepag1.png" width="300" alt="Homepage" />
+<img src="images/homepage2.png" width="300" alt="Homepage" />
+</div>
+<h3>Parking Page</h3>
+<div>
+<img src="images/parkingpage1.png" width="300" alt="Parking Map" />
+	<img src="images/parkingpage2.png" width="300" alt="Parking Map" />
+</div>
 
-![Homepage](images/homepage1.png) 
-![Homepage](images/homepage2.png)
-![Parking Map](images/parkingpag1.png)
-![Parking Map](images/parkingpag2.png)
+<h3>📊 Admin Dashboard (Supervisor View)</h3>
+<div>
+<img src="images/Dashboard .png" width="300" alt="Parking Map" />
+	
+</div>
 
 
 ---
@@ -23,7 +34,7 @@ A smart system designed to help drivers find available parking spots in real tim
 ## ⚙️ Technologies Used
 
 - *Frontend*: React.js + Next.js  
-- *IoT Hardware*: Arduino + ESP32 
+- *IoT Hardware*: Arduino + ESP32-sensor 
 - *Backend/API: Firebase   
 - *Communication*: HTTP Requests or WebSocket  
 
@@ -47,4 +58,6 @@ This system performs the following:
 ⸻
 
 👨‍💻 Developer
-	•	Khalid Faisal — Full project development and implementation
+	•	Khalid Faisal Alfehaid — Full project development and implementation
+
+ note 🗒: This is a graduation project for the 2024-2025 academic year in the Computer Information Systems major.
