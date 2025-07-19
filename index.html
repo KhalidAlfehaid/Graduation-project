@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourSpot | نظام المواقف الذكي</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Tajawal", sans-serif;
+        background: linear-gradient(135deg, #fdfcf8 0%, #f5f3eb 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 4rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 60%
+        );
+        transform: rotate(25deg);
+        transition: 0.5s;
+        pointer-events: none;
+      }
+
+      .card:hover::after {
+        top: -30%;
+        left: 130%;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      }
+
+      section {
+        margin: 6rem 0;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .feature-item {
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .feature-item::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0.3) 0%,
+          rgba(255, 255, 255, 0) 60%
+        );
+        transform: rotate(25deg);
+        transition: 0.5s;
+        pointer-events: none;
+      }
+
+      .feature-item:hover::after {
+        top: -30%;
+        left: 130%;
+      }
+
+      .feature-item:hover {
+        transform: translateY(-8px);
+      }
+
+      .feature-item i {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .cta-button {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+        margin-top: 2rem;
+      }
+
+      .cta-button:hover {
+        background: var(--primary-light);
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigation -->
+      <nav>
+        <div class="logo" style="display: flex; align-items: center; gap: 1rem">
+          <div style="display: flex; align-items: center; gap: 0.5rem">
+            <i class="fas fa-parking"></i>
+            <h1>Your<span>Spot</span></h1>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <header>
+        <h2>مرحباً بك في YourSpot</h2>
+        <p>
+          نظام ذكي لمراقبة المواقف في الوقت الفعلي وتسهيل عملية البحث عن موقف.
+        </p>
+        <button
+          class="cta-button"
+          onclick="window.location.href='parking.html'"
+        >
+          استعرض حالة المواقف
+          <i class="fas fa-arrow-left"></i>
+        </button>
+      </header>
+
+      <!-- About Section -->
+      <section style="text-align: center">
+        <div class="card">
+          <h3>عن YourSpot</h3>
+          <p
+            style="
+              max-width: 600px;
+              margin: 1rem auto;
+              color: var(--light-text);
+            "
+          >
+            YourSpot هو نظام ذكي يهدف إلى تسهيل تجربة ركن السيارات عبر تقديم
+            معلومات محدثة حول توفر المواقف بدقة وسرعة عالية.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section style="text-align: center">
+        <h3>مميزات النظام</h3>
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fas fa-parking"></i>
+            <h4>استعراض المواقف المتاحة</h4>
+            <p style="color: var(--light-text)">
+              عرض المواقف المتوفرة في الوقت الحقيقي.
+            </p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-clock"></i>
+            <h4>توفير الوقت والجهد</h4>
+            <p style="color: var(--light-text)">
+              تسهيل العثور على موقف مناسب بدون إضاعة وقت.
+            </p>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4>تحديد المواقع بدقة</h4>
+            <p style="color: var(--light-text)">
+              إرشادك إلى موقع الموقف عبر الخرائط الذكية.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section style="text-align: center">
+        <div class="card">
+          <h3>شركاؤنا</h3>
+          <p
+            style="
+              max-width: 600px;
+              margin: 1rem auto;
+              color: var(--light-text);
+            "
+          >
+            نفخر بتعاوننا مع عدد من الشركاء الذين يدعمون تطوير حلولنا الذكية.
+            حالياً، شريكنا الرئيسي هو جامعة الإمام عبدالرحمن بن فيصل.
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>YourSpot - نظام المواقف الذكي</p>
+        <p>جامعة الإمام عبدالرحمن بن فيصل &copy; 2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

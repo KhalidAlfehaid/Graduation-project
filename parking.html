@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourSpot | نظام المواقف الذكي</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigation -->
+      <nav>
+        <div class="logo" style="display: flex; align-items: center; gap: 1rem">
+          <div style="display: flex; align-items: center; gap: 0.5rem">
+            <i class="fas fa-parking"></i>
+            <h1>Your<span>Spot</span></h1>
+          </div>
+          <!-- Language Switcher Dropdown -->
+          <div class="lang-switcher">
+            <button
+              onclick="toggleLangMenu()"
+              style="
+                background: none;
+                border: none;
+                color: var(--primary);
+                cursor: pointer;
+                font-size: 1.25rem;
+              "
+            >
+              <i class="fas fa-globe"></i>
+            </button>
+            <div class="lang-menu" id="langMenu">
+              <button onclick="setLanguage('ar')">العربية</button>
+              <button onclick="setLanguage('en')">English</button>
+            </div>
+          </div>
+        </div>
+        <div class="nav-status">
+          <div class="status-indicator">
+            <div class="pulse"></div>
+            <span data-i18n="status">مراقبة في الوقت الفعلي</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <header>
+        <h2 data-i18n="welcome">مرحباً بك في نظام المواقف الذكي</h2>
+        <p data-i18n="status">تابع حالة المواقف في الوقت الفعلي</p>
+      </header>
+
+      <!-- Status Summary -->
+      <div class="summary">
+        <div class="summary-card">
+          <div class="summary-icon available">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="summary-details">
+            <h3 id="available-count">3</h3>
+            <p data-i18n="available">المواقف المتاحة</p>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon occupied">
+            <i class="fas fa-times-circle"></i>
+          </div>
+          <div class="summary-details">
+            <h3 id="occupied-count">2</h3>
+            <p data-i18n="occupied">المواقف المشغولة</p>
+          </div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-icon">
+            <i class="fas fa-parking"></i>
+          </div>
+          <div class="summary-details">
+            <h3 id="total-count">5</h3>
+            <p data-i18n="total">إجمالي المواقف</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parking Grid -->
+      <div class="parking-section">
+        <h2 data-i18n="status">حالة المواقف</h2>
+        <div class="parking-grid" id="parking-grid"></div>
+      </div>
+
+      <!-- Update Time -->
+      <div class="update-time">
+        <p>
+          <span data-i18n="lastUpdate">آخر تحديث:</span>
+          <span id="last-update">...</span>
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <p>YourSpot - نظام المواقف الذكي</p>
+        <p>جامعة الإمام عبدالرحمن بن فيصل &copy; 2024</p>
+      </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+    <script>
+      function toggleLangMenu() {
+        const menu = document.getElementById("langMenu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+
+      window.addEventListener("click", function (e) {
+        const menu = document.getElementById("langMenu");
+        if (!e.target.closest(".lang-switcher")) {
+          menu.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
